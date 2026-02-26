@@ -67,12 +67,68 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ChooseCase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChooseCPU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChooseCuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChooseDisk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChooseGPU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChooseMather.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChoosePower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChooseRAM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\ChooseCase.xaml.cs">
+      <DependentUpon>ChooseCase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseCPU.xaml.cs">
+      <DependentUpon>ChooseCPU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseCuler.xaml.cs">
+      <DependentUpon>ChooseCuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseDisk.xaml.cs">
+      <DependentUpon>ChooseDisk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseGPU.xaml.cs">
+      <DependentUpon>ChooseGPU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseMather.xaml.cs">
+      <DependentUpon>ChooseMather.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChoosePower.xaml.cs">
+      <DependentUpon>ChoosePower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseRAM.xaml.cs">
+      <DependentUpon>ChooseRAM.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Pr15.Pages;
 
-namespace Pr15
+namespace Pr15.Pages
 {
-   
-    public partial class MainWindow : Window
-    { 
-        public Frame Frame => MainFrame;
-        public MainWindow()
+    /// <summary>
+    /// Логика взаимодействия для ChooseGPU.xaml
+    /// </summary>
+    public partial class ChooseGPU : Page
+    {
+        public ChooseGPU()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.NavigationService.Navigate(new MainPage());
         }
     }
 }

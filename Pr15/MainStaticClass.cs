@@ -10,5 +10,6 @@ namespace Pr15
     {
         public static Computer cpu { get; set; } = null;
         public static Computer2 mother { get; set; } = null;
+
     }
 }

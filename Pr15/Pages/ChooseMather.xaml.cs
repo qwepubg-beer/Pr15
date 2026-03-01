@@ -20,14 +20,36 @@ namespace Pr15.Pages
     /// </summary>
     public partial class ChooseMather : Page
     {
+        List<Computer2> computers = new List<Computer2>();
         public ChooseMather()
         {
             InitializeComponent();
+            List<motherboard> motherboards = Core.Context.motherboard.ToList();
+            foreach (motherboard m in motherboards)
+            {
+                basepart basep = Core.Context.basepart.First(u => u.id == m.id);
+                socket sock = Core.Context.socket.First(u => u.id == m.socketid);
+                memorytype memorytype = Core.Context.memorytype.First(u => u.id == m.memorytypeid);
+                formfactor formfactor = Core.Context.formfactor.First(u => u.id == m.formfactorid);
+                Computer2 mypc = new Computer2(m, basep, sock, memorytype, formfactor);
+                computers.Add(mypc);
+            }
+            MotherList.ItemsSource = computers;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (MotherList.SelectedItem != null)
+            {
+                MainStaticClass.mother = (Computer2)MotherList.SelectedItem;
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.MainFrame.Navigate(new MainPage());
+            }
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MotherList.ItemsSource = computers.Where(t => t.basepartmotherboard.name.Contains(TextSearch.Text)).ToList();
         }
     }
 }

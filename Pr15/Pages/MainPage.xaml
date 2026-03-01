@@ -28,7 +28,7 @@
        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Собери свой ПК" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" />
         <Button  Grid.Row="1" Height="50" Content="Выбери процессор" Click="Button_Click"></Button>
         <Button  Grid.Row="2" Height="50" Content="Выбери мать" Click="Button_Click_1"></Button>
-        <Button  Grid.Row="3" Height="50" Content="Выбери блок питания"></Button>
+        <Button  Grid.Row="3" Height="50" Content="Выбери блок питания" Click="Button_Click_2"></Button>
         <Button  Grid.Row="4" Height="50" Content="Выбери корпус"></Button>
         <Button  Grid.Row="5" Height="50" Content="Выбери видиокарту"></Button>
         <Button  Grid.Row="6" Height="50" Content="Выбери оперативную память"></Button>
@@ -37,7 +37,7 @@
         <TextBlock  Name ="Price" Grid.Row="0" Grid.Column="2" Text="Цена: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="CPU" Grid.Row="1" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="Motherboard" Grid.Row="2" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock  Grid.Row="3" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="Power" Grid.Row="3" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Grid.Row="4" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Grid.Row="5" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Grid.Row="6" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>

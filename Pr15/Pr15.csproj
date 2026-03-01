@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Computer.cs" />
     <Compile Include="Computer2.cs" />
+    <Compile Include="Computer3.cs" />
     <Compile Include="cpu.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>

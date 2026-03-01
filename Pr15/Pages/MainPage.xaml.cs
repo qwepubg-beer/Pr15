@@ -40,11 +40,21 @@ namespace Pr15.Pages
             {
                 Motherboard.Text = $"Не выбрано";
             }
+            if (MainStaticClass.power != null)
+            {
+                Power.Text = $"Выбрано: {MainStaticClass.power.basepartpowersupply.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                Power.Text = $"Не выбрано";
+            }
         }
         public decimal Pr()
         {
             decimal a= (MainStaticClass.cpu != null) ? MainStaticClass.cpu.basepartCPU.price: 0;
             a = (MainStaticClass.mother != null) ? MainStaticClass.mother.basepartmotherboard.price+a : a;
+            a = (MainStaticClass.power != null) ? MainStaticClass.power.basepartpowersupply.price + a : a;
             return Math.Round(a);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,6 +67,12 @@ namespace Pr15.Pages
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.MainFrame.Navigate(new ChooseMather());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.MainFrame.Navigate(new ChoosePower());
         }
     }
 }

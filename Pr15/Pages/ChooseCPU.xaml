@@ -22,10 +22,10 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Center">
-                        <Image Height="100" Width="160"  Source="{Binding Image}"/>
+                        <Image Height="100" Width="160"  Source="{Binding basepart.image}"/>
                         <StackPanel VerticalAlignment="Center">
-                            <TextBlock Padding="5" Text="{Binding Name}"/>
-                            <TextBlock Padding="5" Text="{Binding Genre, StringFormat=Цена: {0}}"/>
+                            <TextBlock Padding="5" Text="{Binding Cpuinfo}" TextWrapping="Wrap"/>
+                            <TextBlock Padding="5" Text="{Binding basepart.price, StringFormat=Цена: {0}}"/>
                         </StackPanel>
                         <Button Height="40" Content="Выбрать" Click="Button_Click"></Button>
                     </StackPanel>

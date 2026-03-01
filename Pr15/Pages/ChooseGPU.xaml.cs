@@ -24,5 +24,15 @@ namespace Pr15.Pages
         {
             InitializeComponent();
         }
+
+        private void CPUList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

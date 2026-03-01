@@ -26,7 +26,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Собери свой ПК" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" />
-        <Button  Grid.Row="1" Height="50" Content="Выбери процессор"></Button>
+        <Button  Grid.Row="1" Height="50" Content="Выбери процессор" Click="Button_Click"></Button>
         <Button  Grid.Row="2" Height="50" Content="Выбери мать"></Button>
         <Button  Grid.Row="3" Height="50" Content="Выбери блок питания"></Button>
         <Button  Grid.Row="4" Height="50" Content="Выбери корпус"></Button>

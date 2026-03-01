@@ -16,7 +16,7 @@
             <Button Content="Собрать ПК" Width="100" Click="Button_Click" MaxWidth="200"/>
 
         </StackPanel>
-        <Frame Name="MainFrame" Grid.Row="1"/>
+        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

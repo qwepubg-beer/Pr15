@@ -23,6 +23,22 @@ namespace Pr15.Pages
         public ChooseCPU()
         {
             InitializeComponent();
+            List<cpu> cpus = Core.Context.cpu.ToList();
+            List<Computer> computers = new List<Computer>();
+            foreach (cpu cpu in cpus)
+            {
+                basepart basep = Core.Context.basepart.First(u => u.id==cpu.id);
+                socket sock = Core.Context.socket.First(u => u.id == cpu.socketid);
+                Computer mypc = new Computer(cpu, basep, sock);
+                computers.Add(mypc);
+            }
+            CPUList.ItemsSource = computers;    
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

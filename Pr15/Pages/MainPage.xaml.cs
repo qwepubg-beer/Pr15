@@ -23,8 +23,20 @@ namespace Pr15.Pages
         public MainPage()
         {
             InitializeComponent();
+            if (MainStaticClass.cpu != null) {
+                CPU.Text = $"Выбрано: {MainStaticClass.cpu.basepartCPU.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                CPU.Text = $"Не выбрано";
+            }
         }
-
+        public decimal Pr()
+        {
+            decimal a = Math.Round(MainStaticClass.cpu.basepartCPU.price);
+            return a;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;

@@ -20,11 +20,11 @@ namespace Pr15.Pages
     /// </summary>
     public partial class ChooseCPU : Page
     {
+        List<Computer> computers = new List<Computer>();
         public ChooseCPU()
         {
             InitializeComponent();
             List<cpu> cpus = Core.Context.cpu.ToList();
-            List<Computer> computers = new List<Computer>();
             foreach (cpu cpu in cpus)
             {
                 basepart basep = Core.Context.basepart.First(u => u.id==cpu.id);
@@ -38,7 +38,22 @@ namespace Pr15.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (CPUList.SelectedItem != null) 
+            {
+                MainStaticClass.cpu = (Computer)CPUList.SelectedItem;
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.MainFrame.Navigate(new MainPage());
+            }
+        }
 
+        private void CPUList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CPUList.ItemsSource = computers.Where(t => t.basepartCPU.name.Contains(TextSearch.Text)).ToList();
         }
     }
 }

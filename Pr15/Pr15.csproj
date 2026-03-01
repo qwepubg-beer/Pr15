@@ -89,6 +89,7 @@
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
     <Compile Include="Computer.cs" />
+    <Compile Include="Computer2.cs" />
     <Compile Include="cpu.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -110,6 +111,7 @@
     <Compile Include="igpu.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
+    <Compile Include="MainStaticClass.cs" />
     <Compile Include="manufacturer.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>

@@ -34,8 +34,8 @@
         <Button  Grid.Row="6" Height="50" Content="Выбери оперативную память"></Button>
         <Button  Grid.Row="7" Height="50" Content="Выбери диск"></Button>
         <Button  Grid.Row="8" Height="50" Content="Выбери кулер для процессора"></Button>
-        <TextBlock  Grid.Row="0" Grid.Column="2" Text="Цена: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock  Grid.Row="1" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="Price" Grid.Row="0" Grid.Column="2" Text="Цена: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="CPU" Grid.Row="1" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Grid.Row="2" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Grid.Row="3" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Grid.Row="4" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>

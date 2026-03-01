@@ -20,7 +20,7 @@
         <EntityTypeShape EntityType="DNS15Model.igpu" Width="1.5" PointX="6" PointY="24.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DNS15Model.manufacturer" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DNS15Model.memorytype" Width="1.5" PointX="9" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DNS15Model.motherboard" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DNS15Model.motherboard" Width="1.5" PointX="5.375" PointY="21" IsExpanded="true" />
         <EntityTypeShape EntityType="DNS15Model.partassembly" Width="1.5" PointX="8.25" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DNS15Model.parttype" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DNS15Model.powersupply" Width="1.5" PointX="8.25" PointY="20.875" IsExpanded="true" />

@@ -49,12 +49,22 @@ namespace Pr15.Pages
             {
                 Power.Text = $"Не выбрано";
             }
+            if (MainStaticClass.korpus != null)
+            {
+                Case.Text = $"Выбрано: {MainStaticClass.power.basepartpowersupply.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                Case.Text = $"Не выбрано";
+            }
         }
         public decimal Pr()
         {
             decimal a= (MainStaticClass.cpu != null) ? MainStaticClass.cpu.basepartCPU.price: 0;
             a = (MainStaticClass.mother != null) ? MainStaticClass.mother.basepartmotherboard.price+a : a;
             a = (MainStaticClass.power != null) ? MainStaticClass.power.basepartpowersupply.price + a : a;
+            a = (MainStaticClass.korpus != null) ? MainStaticClass.korpus.basepartcase.price + a : a;
             return Math.Round(a);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -73,6 +83,12 @@ namespace Pr15.Pages
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.MainFrame.Navigate(new ChoosePower());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.MainFrame.Navigate(new ChooseCase());
         }
     }
 }

@@ -30,7 +30,7 @@
         <Button  Grid.Row="2" Height="50" Content="Выбери мать" Click="Button_Click_1"></Button>
         <Button  Grid.Row="3" Height="50" Content="Выбери блок питания" Click="Button_Click_2"></Button>
         <Button  Grid.Row="4" Height="50" Content="Выбери корпус" Click="Button_Click_3"></Button>
-        <Button  Grid.Row="5" Height="50" Content="Выбери видиокарту"></Button>
+        <Button  Grid.Row="5" Height="50" Content="Выбери видиокарту" Click="Button_Click_4"></Button>
         <Button  Grid.Row="6" Height="50" Content="Выбери оперативную память"></Button>
         <Button  Grid.Row="7" Height="50" Content="Выбери диск"></Button>
         <Button  Grid.Row="8" Height="50" Content="Выбери кулер для процессора"></Button>

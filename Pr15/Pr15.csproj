@@ -92,6 +92,7 @@
     <Compile Include="Computer2.cs" />
     <Compile Include="Computer3.cs" />
     <Compile Include="Computer4.cs" />
+    <Compile Include="Computer5.cs" />
     <Compile Include="cpu.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>

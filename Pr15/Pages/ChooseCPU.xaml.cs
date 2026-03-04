@@ -24,14 +24,19 @@ namespace Pr15.Pages
         public ChooseCPU()
         {
             InitializeComponent();
-            List<cpu> cpus = Core.Context.cpu.ToList();
+            List<cpu> cpus = Core.Context.cpu.ToList(); 
+            if(MainStaticClass.mother != null)
+            {
+                computers = computers.Where(u => u.socketCPU.id == MainStaticClass.mother.socketmotherboard.id).ToList(); 
+            }
             foreach (cpu cpu in cpus)
             {
-                basepart basep = Core.Context.basepart.First(u => u.id==cpu.id);
+                basepart basep = Core.Context.basepart.First(u => u.id == cpu.id);
                 socket sock = Core.Context.socket.First(u => u.id == cpu.socketid);
                 Computer mypc = new Computer(cpu, basep, sock);
                 computers.Add(mypc);
             }
+
             CPUList.ItemsSource = computers;    
 
         }

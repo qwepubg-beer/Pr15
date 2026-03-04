@@ -128,8 +128,15 @@ namespace Pr15.Pages
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.MainFrame.Navigate(new ChooseCase());
+            if (MainStaticClass.mother != null)
+            {
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.MainFrame.Navigate(new ChooseCase());
+            }
+            else
+            {
+                MessageBox.Show("Нужна мать!");
+            }
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -140,8 +147,16 @@ namespace Pr15.Pages
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.MainFrame.Navigate(new ChooseCuler());
+            if(MainStaticClass.cpu !=null)
+            { 
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.MainFrame.Navigate(new ChooseCuler()); 
+            }
+            else
+            {
+                MessageBox.Show("Выбер камень!");
+            }
+           
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)

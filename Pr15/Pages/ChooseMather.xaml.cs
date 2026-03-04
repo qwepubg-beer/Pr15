@@ -24,7 +24,16 @@ namespace Pr15.Pages
         public ChooseMather()
         {
             InitializeComponent();
-            List<motherboard> motherboards = Core.Context.motherboard.ToList();
+            List<motherboard> motherboards = Core.Context.motherboard.ToList(); 
+            if (MainStaticClass.cpu != null) 
+            {
+                if(MainStaticClass.ram != null)
+                {
+                     computers = computers.Where(u => u.memorytypemotherboard.id == MainStaticClass.ram.memorytype.id).ToList();
+                }
+                computers = computers.Where(u => u.socketmotherboard.id == MainStaticClass.cpu.socketCPU.id).ToList();
+                
+            }
             foreach (motherboard m in motherboards)
             {
                 basepart basep = Core.Context.basepart.First(u => u.id == m.id);

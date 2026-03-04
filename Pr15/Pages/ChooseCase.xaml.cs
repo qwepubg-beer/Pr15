@@ -24,6 +24,10 @@ namespace Pr15.Pages
         public ChooseCase()
         {
             InitializeComponent();
+            if (MainStaticClass.mother != null)
+            {
+                computers = computers.Where(u => u.formfactor.Contains(MainStaticClass.mother.formfactormotherboard)).ToList();
+            }
             List<@case> cases = Core.Context.@case.ToList();
             foreach (@case m in cases)
             {

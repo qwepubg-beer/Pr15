@@ -11,18 +11,22 @@ namespace Pr15
        public motherboard motherboard {  get; set; }
        public basepart basepartmotherboard { get; set; }
        public socket socketmotherboard { get; set; }
-        public memorytype memorytypemotherboard { get; set; }
-        public formfactor formfactormotherboard { get; set; }
-        public string name { get; set; }
+       public memorytype memorytype { get; set; }
+       public formfactor formfactormotherboard { get; set; }
+       public string name { get; set; }
 
-        public Computer2(motherboard motherboard, basepart basepartmotherboard, socket socketmotherboard, memorytype memorytypemotherboard, formfactor formfactormotherboard)
+        public Computer2(motherboard motherboard)
         {
+            basepart basep = Core.Context.basepart.First(u => u.id == motherboard.id);
+            socket sock = Core.Context.socket.First(u => u.id == motherboard.socketid);
+            memorytype memorytype = Core.Context.memorytype.First(u => u.id == motherboard.memorytypeid);
+            formfactor formfactor = Core.Context.formfactor.First(u => u.id == motherboard.formfactorid);
             this.motherboard = motherboard;
-            this.basepartmotherboard = basepartmotherboard;
-            this.socketmotherboard = socketmotherboard;
-            this.memorytypemotherboard = memorytypemotherboard;
-            this.formfactormotherboard = formfactormotherboard;
-            name = $"Материнская плата {basepartmotherboard.name} [{socketmotherboard.name}, {motherboard.memoryslots}x{memorytypemotherboard.name}, {motherboard.pcislots}xPCI, {motherboard.sataports}xSATA, {formfactormotherboard.name}]";
+            basepartmotherboard = basep;
+            socketmotherboard = sock;
+            this.memorytype = memorytype;
+            formfactormotherboard = formfactor;
+            name = $"Материнская плата {basepartmotherboard.name} [{socketmotherboard.name}, {motherboard.memoryslots}x{memorytype.name}, {motherboard.pcislots}xPCI, {motherboard.sataports}xSATA, {formfactormotherboard.name}]";
         }
     }
 }

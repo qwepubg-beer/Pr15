@@ -132,6 +132,9 @@
     <Compile Include="motherboard.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EndPage.xaml.cs">
+      <DependentUpon>EndPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="partassembly.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -224,6 +227,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\EndPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -303,6 +310,7 @@
       <DependentUpon>BD.edmx</DependentUpon>
       <LastGenOutput>BD.cs</LastGenOutput>
     </Content>
+    <Resource Include="comp.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

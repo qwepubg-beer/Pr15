@@ -25,23 +25,18 @@ namespace Pr15.Pages
         {
             InitializeComponent();
             List<motherboard> motherboards = Core.Context.motherboard.ToList(); 
-            if (MainStaticClass.cpu != null) 
-            {
-                if(MainStaticClass.ram != null)
-                {
-                     computers = computers.Where(u => u.memorytypemotherboard.id == MainStaticClass.ram.memorytype.id).ToList();
-                }
-                computers = computers.Where(u => u.socketmotherboard.id == MainStaticClass.cpu.socketCPU.id).ToList();
-                
-            }
             foreach (motherboard m in motherboards)
             {
-                basepart basep = Core.Context.basepart.First(u => u.id == m.id);
-                socket sock = Core.Context.socket.First(u => u.id == m.socketid);
-                memorytype memorytype = Core.Context.memorytype.First(u => u.id == m.memorytypeid);
-                formfactor formfactor = Core.Context.formfactor.First(u => u.id == m.formfactorid);
-                Computer2 mypc = new Computer2(m, basep, sock, memorytype, formfactor);
+                Computer2 mypc = new Computer2(m);
                 computers.Add(mypc);
+            }
+            if (MainStaticClass.cpu != null) 
+            {
+                computers = computers.Where(u => u.socketmotherboard.id == MainStaticClass.cpu.socketCPU.id).ToList();
+            }
+            if (MainStaticClass.ram != null)
+            {
+                computers = computers.Where(u => u.memorytype == MainStaticClass.ram.memorytype).ToList();
             }
             MotherList.ItemsSource = computers;
         }

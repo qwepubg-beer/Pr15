@@ -24,11 +24,16 @@ namespace Pr15.Pages
         public ChooseRAM()
         {
             InitializeComponent();
-            List<ram> rams = Core.Context.ram.ToList();
+
+            List<ram> rams = Core.Context.ram.ToList();           
             foreach (ram r in rams)
             {
                 Computer8 g = new Computer8(r);
                 computers.Add(g);
+            }
+            if (MainStaticClass.mother != null)
+            {
+                computers = computers.Where(u => u.memorytype == MainStaticClass.mother.memorytype).ToList();
             }
             RAMList.ItemsSource = computers;
         }

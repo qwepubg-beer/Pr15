@@ -24,10 +24,6 @@ namespace Pr15.Pages
         public ChooseCase()
         {
             InitializeComponent();
-            if (MainStaticClass.mother != null)
-            {
-                computers = computers.Where(u => u.formfactor.Contains(MainStaticClass.mother.formfactormotherboard)).ToList();
-            }
             List<@case> cases = Core.Context.@case.ToList();
             foreach (@case m in cases)
             {
@@ -35,6 +31,10 @@ namespace Pr15.Pages
                 casesize sock = Core.Context.casesize.First(u => u.id == m.sizeid);
                 Computer4 mypc = new Computer4(m, basep, sock);
                 computers.Add(mypc);
+            }
+            if (MainStaticClass.mother != null)
+            {
+                computers = computers.Where(u => u.formfactor.Contains(MainStaticClass.mother.formfactormotherboard)).ToList();
             }
             CaseList.ItemsSource = computers;
         }

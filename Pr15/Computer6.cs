@@ -12,7 +12,7 @@ namespace Pr15
         public processorcooler processorcooler {  get; set; }
         public basepart basepartcooler { get; set; }  
         public fandimension fandimension { get; set; }  
-        List<socket> sockets { get; set; } = new List<socket>();
+        public List<socket> sockets { get; set; } = new List<socket>();
         public string name { get; set; }
         public Computer6 (processorcooler processorcooler)
         {

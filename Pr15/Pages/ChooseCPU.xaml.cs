@@ -25,10 +25,7 @@ namespace Pr15.Pages
         {
             InitializeComponent();
             List<cpu> cpus = Core.Context.cpu.ToList(); 
-            if(MainStaticClass.mother != null)
-            {
-                computers = computers.Where(u => u.socketCPU.id == MainStaticClass.mother.socketmotherboard.id).ToList(); 
-            }
+
             foreach (cpu cpu in cpus)
             {
                 basepart basep = Core.Context.basepart.First(u => u.id == cpu.id);
@@ -36,7 +33,10 @@ namespace Pr15.Pages
                 Computer mypc = new Computer(cpu, basep, sock);
                 computers.Add(mypc);
             }
-
+            if(MainStaticClass.mother != null)
+            {
+                computers = computers.Where(u => u.socketCPU.id == MainStaticClass.mother.socketmotherboard.id).ToList(); 
+            }
             CPUList.ItemsSource = computers;    
 
         }

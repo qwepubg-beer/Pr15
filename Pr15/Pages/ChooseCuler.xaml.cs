@@ -21,14 +21,24 @@ namespace Pr15.Pages
     public partial class ChooseCuler : Page
     {
         List<Computer6> computers = new List<Computer6>();
+
         public ChooseCuler()
         {
             InitializeComponent();
+           
             List<processorcooler> coolers = Core.Context.processorcooler.ToList();
             foreach (processorcooler m in coolers)
             {
                 Computer6 g = new Computer6(m);
                 computers.Add(g);
+            } 
+            if (MainStaticClass.cpu != null)
+            {
+                if (MainStaticClass.mother != null)
+                {
+                    computers = computers.Where(u => u.sockets.Contains(MainStaticClass.mother.socketmotherboard)).ToList();
+                }
+                computers = computers.Where(u => u.sockets.Contains(MainStaticClass.cpu.socketCPU)).ToList();
             }
             CulerList.ItemsSource = computers;
         }

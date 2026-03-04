@@ -170,5 +170,31 @@ namespace Pr15.Pages
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.MainFrame.Navigate(new ChooseRAM());
         }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            bool comp1=MainStaticClass.cpu != null;
+            bool comp2 = MainStaticClass.storage != null;
+            bool comp3 = MainStaticClass.gpu != null;
+            bool comp4 = MainStaticClass.cooler != null;
+            bool comp5 = MainStaticClass.power != null;
+            bool comp6 = MainStaticClass.korpus != null;
+            bool comp7 = MainStaticClass.ram != null;
+            bool comp8 = MainStaticClass.mother != null;
+            if(comp1 && comp2 && comp3 && comp4 && comp5 && comp6 && comp7 && comp8)
+            {
+                MessageBox.Show("Поздравляем с покупкой!"); 
+                if (MainStaticClass.cpu.cpu.thermalpower + MainStaticClass.gpu.gpu.recommendpower + 50 > MainStaticClass.power.powersupply.power)
+                {
+                    MessageBox.Show("Вам нехватает мощности, выбирите другой блок питания");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выбирите все основные компоненты!");
+            }
+
+   
+        }
     }
 }

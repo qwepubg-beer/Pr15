@@ -25,7 +25,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-       <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Собери свой ПК" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" />
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Собери свой ПК" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" />
         <Button  Grid.Row="1" Height="50" Content="Выбери процессор" Click="Button_Click"></Button>
         <Button  Grid.Row="2" Height="50" Content="Выбери мать" Click="Button_Click_1"></Button>
         <Button  Grid.Row="3" Height="50" Content="Выбери блок питания" Click="Button_Click_2"></Button>
@@ -43,5 +43,6 @@
         <TextBlock  Name ="RAM" Grid.Row="6" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="DISK" Grid.Row="7" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="COOLER" Grid.Row="8" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <Button Grid.Column="2" Content="Купить компьютор" Click="Button_Click_8" Grid.Row="1"/>
     </Grid>
 </Page>

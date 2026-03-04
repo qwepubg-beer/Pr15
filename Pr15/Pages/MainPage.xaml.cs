@@ -183,11 +183,13 @@ namespace Pr15.Pages
             bool comp8 = MainStaticClass.mother != null;
             if(comp1 && comp2 && comp3 && comp4 && comp5 && comp6 && comp7 && comp8)
             {
-                MessageBox.Show("Поздравляем с покупкой!"); 
                 if (MainStaticClass.cpu.cpu.thermalpower + MainStaticClass.gpu.gpu.recommendpower + 50 > MainStaticClass.power.powersupply.power)
                 {
                     MessageBox.Show("Вам нехватает мощности, выбирите другой блок питания");
+                    MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                    mainWindow.MainFrame.Navigate(new EndPage());
                 }
+
             }
             else
             {

@@ -135,6 +135,9 @@
     <Compile Include="Pages\EndPage.xaml.cs">
       <DependentUpon>EndPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Sborki.xaml.cs">
+      <DependentUpon>Sborki.xaml</DependentUpon>
+    </Compile>
     <Compile Include="partassembly.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -232,6 +235,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sborki.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

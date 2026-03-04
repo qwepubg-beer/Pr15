@@ -31,17 +31,17 @@
         <Button  Grid.Row="3" Height="50" Content="Выбери блок питания" Click="Button_Click_2"></Button>
         <Button  Grid.Row="4" Height="50" Content="Выбери корпус" Click="Button_Click_3"></Button>
         <Button  Grid.Row="5" Height="50" Content="Выбери видиокарту" Click="Button_Click_4"></Button>
-        <Button  Grid.Row="6" Height="50" Content="Выбери оперативную память"></Button>
-        <Button  Grid.Row="7" Height="50" Content="Выбери диск"></Button>
-        <Button  Grid.Row="8" Height="50" Content="Выбери кулер для процессора"></Button>
+        <Button  Grid.Row="6" Height="50" Content="Выбери оперативную память" Click="Button_Click_7"></Button>
+        <Button  Grid.Row="7" Height="50" Content="Выбери диск" Click="Button_Click_6"></Button>
+        <Button  Grid.Row="8" Height="50" Content="Выбери кулер для процессора" Click="Button_Click_5"></Button>
         <TextBlock  Name ="Price" Grid.Row="0" Grid.Column="2" Text="Цена: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="CPU" Grid.Row="1" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="Motherboard" Grid.Row="2" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
         <TextBlock  Name ="Power" Grid.Row="3" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock   Name ="Case" Grid.Row="4" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock  Grid.Row="5" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock  Grid.Row="6" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock  Grid.Row="7" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
-        <TextBlock  Grid.Row="8" Grid.Column="1" Text="Выбрано: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="Case" Grid.Row="4" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="GPU"  Grid.Row="5" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="RAM" Grid.Row="6" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="DISK" Grid.Row="7" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBlock  Name ="COOLER" Grid.Row="8" Grid.Column="1" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
     </Grid>
 </Page>

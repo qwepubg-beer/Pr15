@@ -13,10 +13,10 @@ namespace Pr15
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DNS15Entities : DbContext
+    public partial class GMO1CEntities : DbContext
     {
-        public DNS15Entities()
-            : base("name=DNS15Entities")
+        public GMO1CEntities()
+            : base("name=GMO1CEntities")
         {
         }
     
@@ -52,6 +52,7 @@ namespace Pr15
         public DbSet<storagedevice> storagedevice { get; set; }
         public DbSet<storagedeviceinterface> storagedeviceinterface { get; set; }
         public DbSet<storagedevicetype> storagedevicetype { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<videoconnector> videoconnector { get; set; }
         public DbSet<videoconnectorgpu> videoconnectorgpu { get; set; }
     }

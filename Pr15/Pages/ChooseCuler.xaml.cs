@@ -20,14 +20,32 @@ namespace Pr15.Pages
     /// </summary>
     public partial class ChooseCuler : Page
     {
+        List<Computer6> computers = new List<Computer6>();
         public ChooseCuler()
         {
             InitializeComponent();
+            List<processorcooler> coolers = Core.Context.processorcooler.ToList();
+            foreach (processorcooler m in coolers)
+            {
+                Computer6 g = new Computer6(m);
+                computers.Add(g);
+            }
+            CulerList.ItemsSource = computers;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (CulerList.SelectedItem != null)
+            {
+                MainStaticClass.cooler = (Computer6)CulerList.SelectedItem;
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+                mainWindow.MainFrame.Navigate(new MainPage());
+            }
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CulerList.ItemsSource = computers.Where(t => t.basepartcooler.name.Contains(TextSearch.Text)).ToList();
         }
     }
 }

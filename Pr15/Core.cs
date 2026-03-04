@@ -8,6 +8,6 @@ namespace Pr15
 {
     internal class Core
     {
-        public static DNS15Entities Context = new DNS15Entities();
+        public static GMO1CEntities Context = new GMO1CEntities();
     }
 }

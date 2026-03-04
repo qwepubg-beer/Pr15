@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>.\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>.\EntityFramework.SqlServer.dll</HintPath>
@@ -76,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
+    <Compile Include="BD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.edmx</DependentUpon>
+    </Compile>
     <Compile Include="boardformfactorcase.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -93,6 +98,9 @@
     <Compile Include="Computer3.cs" />
     <Compile Include="Computer4.cs" />
     <Compile Include="Computer5.cs" />
+    <Compile Include="Computer6.cs" />
+    <Compile Include="Computer7.cs" />
+    <Compile Include="Computer8.cs" />
     <Compile Include="cpu.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -157,6 +165,9 @@
     <Compile Include="storagedevicetype.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
     <Compile Include="videoconnector.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -175,11 +186,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BD.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BD.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD.edmx</DependentUpon>
     </Compile>
     <Compile Include="Core.cs" />
     <Compile Include="MainWindow.xaml.cs">

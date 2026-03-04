@@ -51,13 +51,50 @@ namespace Pr15.Pages
             }
             if (MainStaticClass.korpus != null)
             {
-                Case.Text = $"Выбрано: {MainStaticClass.power.basepartpowersupply.name}";
+                Case.Text = $"Выбрано: {MainStaticClass.korpus.basepartcase.name}";
                 Price.Text = $"Цена : {Pr()}";
             }
             else
             {
                 Case.Text = $"Не выбрано";
             }
+            if (MainStaticClass.ram != null)
+            {
+               RAM.Text = $"Выбрано: {MainStaticClass.ram.basepartram.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                RAM.Text = $"Не выбрано";
+            }
+            if (MainStaticClass.storage != null)
+            {
+                DISK.Text = $"Выбрано: {MainStaticClass.storage.basepartdevice.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                DISK.Text = $"Не выбрано";
+            }
+            if (MainStaticClass.cooler != null)
+            {
+                COOLER.Text = $"Выбрано: {MainStaticClass.cooler.basepartcooler.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                COOLER.Text = $"Не выбрано";
+            }
+            if (MainStaticClass.gpu != null)
+            {
+                GPU.Text = $"Выбрано: {MainStaticClass.gpu.basepartgpu.name}";
+                Price.Text = $"Цена : {Pr()}";
+            }
+            else
+            {
+                GPU.Text = $"Не выбрано";
+            }
+
         }
         public decimal Pr()
         {
@@ -66,6 +103,9 @@ namespace Pr15.Pages
             a = (MainStaticClass.power != null) ? MainStaticClass.power.basepartpowersupply.price + a : a;
             a = (MainStaticClass.korpus != null) ? MainStaticClass.korpus.basepartcase.price + a : a;
             a = (MainStaticClass.gpu != null) ? MainStaticClass.gpu.basepartgpu.price + a : a;
+            a = (MainStaticClass.cooler != null) ? MainStaticClass.cooler.basepartcooler.price + a : a;
+            a = (MainStaticClass.storage != null) ? MainStaticClass.storage.basepartdevice.price + a : a;
+            a = (MainStaticClass.ram != null) ? MainStaticClass.ram.basepartram.price + a : a;
             return Math.Round(a);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -96,6 +136,24 @@ namespace Pr15.Pages
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.MainFrame.Navigate(new ChooseGPU());
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.MainFrame.Navigate(new ChooseCuler());
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.MainFrame.Navigate(new ChooseDisk());
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.MainFrame.Navigate(new ChooseRAM());
         }
     }
 }

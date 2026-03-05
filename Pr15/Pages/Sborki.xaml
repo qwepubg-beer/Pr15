@@ -18,14 +18,14 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="CaseList"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="1" Grid.ColumnSpan="3" SelectionChanged="CaseList_SelectionChanged">
+        <ListBox x:Name="SborkaList"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="1" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Center">
                         <StackPanel VerticalAlignment="Center">
-                            <TextBlock Padding="5" Text="{Binding name,StringFormat=Название: {0}
-                                }" TextWrapping="Wrap"/>
-                            <TextBlock Padding="5" Text="{Binding author, StringFormat=Автор: {0}}"/>
+                            <TextBlock Padding="5" Text="{Binding assembly.name,StringFormat=Название: {0}}" TextWrapping="Wrap"/>
+                            <TextBlock Padding="5" Text="{Binding assembly.author, StringFormat=Автор: {0}}"/>
+                            <TextBlock Padding="5" Text="{Binding name,StringFormat=Название: {0}}" TextWrapping="Wrap"/>
                         </StackPanel>
                         <Button Height="40" Content="Выбрать" Click="Button_Click"></Button>
                     </StackPanel>

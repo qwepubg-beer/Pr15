@@ -20,17 +20,44 @@ namespace Pr15.Pages
     /// </summary>
     public partial class Sborki : Page
     {
+        public List<Sbor> sber=new List<Sbor>(); 
         public Sborki()
         {
             InitializeComponent();
-        }
-        public void sb(List<partassembly> list)
-        {
-            string name = string.Empty;
-            foreach (partassembly partassembly in list)
+            List<assembly> rs = Core.Context.assembly.ToList();
+              
+            foreach (assembly asem in rs)
             {
-                basepart removeUser = basepart.(u => u.Клиент.Contains("Гордов"));
+                Sbor sbor=new Sbor(asem);
+                sber.Add(sbor);
             }
+            SborkaList.ItemsSource = sber;
+        }
+        public class Sbor
+        {
+            public assembly assembly {  get; set; }
+            public string name { get; set; }
+            public Sbor(assembly assembly) 
+            {
+                this.assembly = assembly;
+                List<partassembly> list = Core.Context.partassembly.Where(u => u.assemblyid==assembly.id).ToList();
+                foreach (partassembly partassembly in list)
+                {
+                    basepart basep = Core.Context.basepart.First(u => u.id==partassembly.partid);
+                    name += $"{basep.name}, ";
+                }
+            }
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Поздравляю с покупкой");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SborkaList.ItemsSource = sber.Where(t => t.assembly.name.Contains(TextSearch.Text)).ToList();
         }
     }
 }

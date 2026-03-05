@@ -186,6 +186,9 @@ namespace Pr15.Pages
                 if (MainStaticClass.cpu.cpu.thermalpower + MainStaticClass.gpu.gpu.recommendpower + 50 > MainStaticClass.power.powersupply.power)
                 {
                     MessageBox.Show("Вам нехватает мощности, выбирите другой блок питания");
+                }
+                else
+                {
                     MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
                     mainWindow.MainFrame.Navigate(new EndPage());
                 }

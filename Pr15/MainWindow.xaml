@@ -11,12 +11,14 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
-
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button Content="Собрать ПК" Width="100" Click="Button_Click" MaxWidth="200"/>
-
-        </StackPanel>
-        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Button  Grid.Row="0" Grid.Column="0" Content="Собрать ПК" Width="120" Click="Button_Click" MaxWidth="200" HorizontalAlignment="Center"/>
+        <Button  Grid.Row="0" Grid.Column="1" Content="Сборки" Width="120" MaxWidth="200" HorizontalAlignment="Center" Click="Button_Click_1"/>
+        <Frame Name="MainFrame" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

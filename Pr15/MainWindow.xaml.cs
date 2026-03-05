@@ -29,5 +29,10 @@ namespace Pr15
         {
             MainFrame.NavigationService.Navigate(new MainPage());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Sborki());
+        }
     }
 }
